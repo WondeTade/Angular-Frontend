@@ -1,0 +1,45 @@
+
+.showcase {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.showcase::before {
+    content: '';
+    background: url(../../../assets/images/bulima-global.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.showcase-inner h1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.showcase-inner h2 {
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 700px) {
+
+    .showcase-inner h1,
+    .showcase-inner h2 {
+        font-size: 1.3rem;
+    }
+
+}

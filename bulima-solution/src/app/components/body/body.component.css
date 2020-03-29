@@ -1,0 +1,48 @@
+
+.articles-content
+{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    background-color: rgb(233, 245, 238);
+    border-radius: 20px;
+    margin: auto;
+}
+
+.articles-content:hover {
+    background-color: rgb(207, 219, 223);
+    margin-top: 10px;
+    transition-duration: 0.1s;
+}
+
+.articles-content h1 {
+    margin-top: 10px;
+}
+
+.articles-content p {
+    padding: 10px;
+}
+.article-image {
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    height: auto;
+}
+
+.article-heading {
+    text-decoration: none;
+    text-align: center;
+}
+
+.link-to:hover {
+    color: var(--primary-color);
+    text-decoration: underline var(--overlay-color);
+}
+
+
+.article-image:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    width: 100%;
+    margin: auto;
+}

@@ -1,0 +1,54 @@
+<div class="template-card-wrapper">
+
+<mat-card class="template-card">
+  <h2>{{ pageTitle }}</h2>
+
+  <div class="serach-text">
+    <input type="text" [(ngModel)]='searchByName' placeholder="search by name"><span>
+      <mat-icon class="mat-icon">search</mat-icon>
+    </span>
+  </div>
+  <mat-list-item class="filterd">Searching: {{ filterd }}</mat-list-item>
+
+  <div class="content-wrapper">
+    <mat-card-content *ngIf='contents && contents.length'>
+      <mat-list class="articles-list" *ngFor='let content of filteredContent'>
+        <mat-divider></mat-divider>
+        <div class="thumbnail-image-wrapper">
+          <a [routerLink]="['/ethio-celebrities', content.personId]" >
+          <img id="thumbnail-image" src="{{ imageSrc }}" alt="Photo of {{content.fullName}} ">
+        </a>
+        </div>
+          <div class="flex-items">
+            <div><h6>Photo by Abigail Tadele</h6></div>
+            <span *ngIf="content?.fullName" >Full Name: {{ content.fullName }}</span>
+            <span *ngIf="content?.maritalStatus">Civil Status: {{ content.maritalStatus }}</span>
+            <span *ngIf="content?.personAge">Age: {{ content.personAge }}</span>
+            <span *ngIf="content?.numberOfChild">Child: {{ content.numberOfChild }}</span>
+            <span *ngIf="content?.facebookUrl">Facebook: {{ content.facebookUrl }}</span>
+            <span *ngIf="content?.instagramUrl">Instagram: {{ content.instagramUrl }}</span>
+            <span *ngIf="content?.youtubeUrl">Youtube: {{ content.youtubeUrl }}</span>
+            <span *ngIf="content?.telegramUrl">Telegram: {{ content.telegramUrl }}</span>
+            <span *ngIf="content?.twitterUrl">Twitter: {{ content.twitterUrl }}</span>
+
+            <span *ngIf="content?.articleName">City Name: {{ content.articleName }}</span>
+            <span *ngIf="content?.articleLocation">Location: {{ content.articleLocation }}</span>
+            <span *ngIf="content?.articleDescription">Description: {{ content.articleDescription }}</span>
+          <mat-card-actions>
+            <mat-card-header>
+              <div mat-card-avatar class="profile-image"> </div>
+              <mat-list-item><a [routerLink]="['/ethio-celebrities', content.personId]" >{{content.fullName }} </a> </mat-list-item>
+              <mat-list-item>
+                <button class="thumbnail-like">LIKE</button>
+                <button class="thumbnail-share">SHARE</button>
+              </mat-list-item>
+            </mat-card-header>
+          </mat-card-actions>
+       
+        </div>
+          <mat-divider></mat-divider>
+      </mat-list>
+    </mat-card-content>
+  </div>
+</mat-card>
+</div>

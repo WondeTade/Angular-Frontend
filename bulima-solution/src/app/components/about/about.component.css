@@ -1,0 +1,195 @@
+
+/* About page */
+
+.pofile-container {
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+}
+.profile-wrapper {
+    display: block;
+    float: none;
+    width: 100%;
+}
+
+.profile-image-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.left-side label {
+    display: block;
+    cursor: pointer;
+}
+
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: 100%;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-left: 5px;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.brand h3 {
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.profile-content-wrapper p h1 {
+     color: #ffffff;
+}
+
+
+ .frame {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 50%;
+    height: auto;
+}
+
+ .form-to-fill {
+    float: right;
+    width: 40%;
+    margin: 20px;
+}
+
+/* Side bar*/
+.quote {
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.quote input {
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    margin: auto;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+}
+
+textarea {
+    resize: none;
+    border-radius: 4px;
+    width: 100%;
+    line-height: normal;
+}
+
+.left-side label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+.send_btn:hover {
+    opacity: 0.75;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: bolder;
+    background-color: aqua;
+    color: #35424a;
+}
+
+#toggler {
+    display: none;
+}
+
+/* Media Query */
+
+@media(max-width: 768px) {
+
+  
+    .profile-wrapper {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image-wrapper img {
+        width: 100%;
+        margin: auto;
+    }
+
+    .left-side label {
+        display: block;
+        cursor: pointer;
+    }
+
+    #map {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .frame {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .fram iframe {
+        width: 100%;
+    }
+    .quote {
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+        height: auto;
+    }
+
+    .quote input, textarea {
+        width: 60%;
+    }
+
+    .send_btn {
+        background-color: var(--primary-color);
+        border: none;
+        padding: 10px;
+        color: wheat;
+        border-radius: 4px;
+    }
+    
+    .form-to-fill {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .form-to-fill h3 {
+        display: block;
+        text-align: center;
+    }
+}

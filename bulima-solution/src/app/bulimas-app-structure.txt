@@ -1,0 +1,66 @@
+ö src
++-------ö app
+|       +---ö componenets       
+|       |    |---ö body
+|       |    |   |--body-thumbnail.compoenent
+|       |    |   |--body.compoenent.ts | css
+|       |    |   |>>> start-page.module.ts 
+|       |    |            | <<<< [ sharedModule, RouterModule ] 
+|       |    |            | >>>> [BodyThumbnailComponent, BodyComponent, WelcomeComponent]
+|       |    |
+|       |    |---ö ethio-celebrities
+|       |    |    |---ö celebrities-details
+|       |    |    |     |-- celebrities-details.compoenent.ts | html                  
+|       |    |    |     |-- create-celebrity.compoenent.css
+|       |    |    |
+|       |    |    |---ö celebrities-list
+|       |    |    |    |-- celebrities-list.compoenent.ts
+|       |    |    |    |-- articles-template.component.html | css
+|       |    |    |
+|       |    |    |>>>> ethio-celebrities.module.ts
+|       |    |           |<<<< [SharedModule, MaterialModule, FlexLayoutModule,RouterModule.forChild]
+|       |    |           |>>>> [EthioCelebritieListComponent, EthioCelebrityDetailsComponent ]
+|       |    |    
+|       |    |---ö ehtio-cities    
+|       |    |     |--ethio-cities-list.compoenent.ts   
+|       |    |     |-- articles-template.component.html | css
+|       |    |
+|       |    |---ö ethio-attractions
+|       |    |    |--- ethio-attractions.compoenent.ts
+|       |    |    |-- articles-template.component.html | css
+|       |    |
+|       |    |---ö navbar
+|       |    |   |--- navbar.compoenent.ts | html | css
+|       |    |
+|       |    |---ö create
+|       |    |   |--- create.compoenent.ts | html | css
+|       |    |
+|       |    |---ö welcome 
+|       |         | welcome.compoenent.ts | html | css
+|       |    
+|       +---ö shared
+|       |   |
+|       |   |---ö compoenent
+|       |   |   |--- articles-template.compoenent.html | css
+|       |   |
+|       |   |---ö const-ethio-celebrities
+|       |   |   |--- celebrities-basic-information.ts
+|       |   |
+|       |   |---ö modules
+|       |   |   |--- materialModule.ts
+|       |   |   |--- sharedModule.ts
+|       |   |                   
+|       |   |---ö services
+|       |   |   |--- body-content.service.ts (sharing the template > BodyThumbnailComponent)
+|       |   |   |--- ethio-celebrities.service.ts (CRUD spring-boot API)
+|       |   |   |--- ethio-cities.service.ts (CRUD spring-boot API)
+|       |   |   |--- ethio-attractions.service.ts (CRUD spring-boot API)
+|       |   |   |--- http-options.service.ts
+|       |   |
+|       |   |---ö validators
+|       |       |--- number.validators.ts
+|       |       |--- emailDomain.validators.ts
+|       |
+|       |--- app.module.ts
+|       |--- app.compoenent.ts
+|       |--- app-routing.ts

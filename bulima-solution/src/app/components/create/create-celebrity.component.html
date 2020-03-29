@@ -1,0 +1,76 @@
+<div class="showcase">
+    <div class="showcase-inner">
+        <h1>{{ pageTitle }} </h1>
+        <h2>Registration Form</h2>
+    </div>
+</div>
+
+<div class="form">
+    <div class="form-content">
+
+        <form [formGroup]="celebrityForm" (ngSubmit)='onSubmit()' novalidate>
+            <div class="form-container">
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="fullName"
+                        placeholder="&nbsp; Please enter full name">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="personAge" placeholder="&nbsp; Age">
+                    <span *ngIf="celebrityForm.get('personAge').errors?.range">
+                        You are not old enough/too old to use this app!!
+                    </span>
+                </mat-form-field>
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="numberOfChild"
+                        placeholder="&nbsp; Do you have child?">
+                    <span *ngIf="celebrityForm.get('numberOfChild').errors?.range">
+                        Not logical.
+                    </span>
+                </mat-form-field>
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="facebookUrl"
+                        placeholder="&nbsp; Facebook link:  (ex. https://www.facebook.com/bulimas)">
+                </mat-form-field>
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="instagramUrl" placeholder="&nbsp; Instagram Link">
+                </mat-form-field>
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="youtubeUrl" placeholder="&nbsp; Youtube Link">
+                </mat-form-field>
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="telegramUrl" placeholder="&nbsp; Telegram Link">
+                </mat-form-field>
+                <mat-form-field>
+                    <input id="form-input" matInput formControlName="twitterUrl" placeholder="&nbsp; Twitter Link">
+                </mat-form-field>
+            </div>
+
+            <div class="control-container">
+                <div class="gender">
+                    <mat-radio-group formControlName="gender">
+                        <mat-label>Gender: </mat-label>
+                        <mat-radio-button value="male">Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                        <mat-radio-button value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="control-container">
+                <div class="status">
+                    <mat-radio-group formControlName="maritalStatus">
+                        <mat-label>Civil Status: </mat-label>
+                        <mat-radio-button value="married">Married</mat-radio-button>
+                        <mat-radio-button value="Single">Single</mat-radio-button>
+                        <mat-radio-button value="Widowed">Widowed</mat-radio-button>
+                        <mat-radio-button value="Divorced">Divorced</mat-radio-button>
+                        <mat-radio-button value="Skip">Skip</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!celebrityForm.valid">
+                Submit </button>
+            </form>
+    </div>
+</div>

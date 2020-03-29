@@ -1,0 +1,11 @@
+{
+    "/server": {
+        "target": "https://bulima-global-spring-boot.herokuapp.com",
+        "secure": false,
+        "changeOrigin": true,
+        "longLevel": "debug",
+        "pathRewrite": {
+            "^/server": ""
+        }
+    }
+}

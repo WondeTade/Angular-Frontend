@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Robot', sans-serif;
+    line-height: 1.4;
+    margin: 0 auto;
+    width: auto;
+}
+
+.meta-info {
+    color: grey;
+    font-size: 14px;
+}
+
+.body-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+
+
+/* Footer */
+.footer-section {
+    display: block;
+    background: rgba(24, 39, 51);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.footer {
+    height: 2.5rem;
+    margin: 0 25px;
+}
+
+.footer p {
+    color: aqua;
+    line-height: 60px;
+    text-align: center;
+}
+
+
+@media (max-width: 700px) {
+
+   
+    .image img {
+        max-width: 35vw;
+        height: auto;
+        height: 100%;
+        text-align: center;
+    } 
+
+    .table tr {
+        table-layout: auto;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .information-container tr {
+        width: 100%;
+    }
+    .table .info-column {
+        width: 100%;
+    }
+
+    .footer-section {
+        display: flex;
+        background: rgba(24, 39, 51);
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+   
+    .footer p {
+        color: aqua;
+        line-height: 60px;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

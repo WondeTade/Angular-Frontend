@@ -1,0 +1,234 @@
+
+.mat-toolbar {
+    display: flex;
+    color: aliceblue;
+    background: rgba(24, 39, 51);
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.span-tag {
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+
+}
+
+.span-tag a {
+    color: cyan;
+    text-decoration: none;
+}
+
+.span-tag:hover,
+.span-tag a:hover {
+    color: yellowgreen;
+    cursor: pointer;
+}
+
+.nav-bar-header {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+}
+
+.menu-wrapper {
+    text-align: right;
+    height: 56px;
+    line-height: 56px;
+}
+
+.menu-wrapper .register {
+    text-decoration: none;
+    float: right;
+    margin-right: 35px;
+    padding: 0 10px;
+    color: aqua;
+    font-size: 16px;
+}
+
+.menu-wrapper .logo {
+    text-decoration: none;
+    float: right;
+    margin-left: 5px;
+    padding: 0 10px;
+    color: aqua;
+    font-size: 16px;
+}
+
+.menu-wrapper #toggler {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 12px;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+}
+
+.menu-wrapper .burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 56px;
+    padding: 1rem;
+    background: var(--overlay-color);
+    align-items: center;
+    justify-content: right;
+}
+
+.menu-wrapper .burger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.menu-wrapper .burger > div::before,
+.menu-wrapper .burger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-wrapper .burger > div::after {
+    top: 10px;
+}
+
+#toggler, 
+.burger {
+    display: none;
+}
+
+.mat-icon {
+    top: 10px;
+    position: relative;
+    padding: 0;
+}
+
+
+
+/* Logo bounce while hovering */
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.logo:hover,
+.register:hover {
+    border: 1px solid var(--primary-color);
+    color: chartreuse;
+    background: rgba(0, 0, 0, 1);
+    margin-top: auto;
+    cursor: pointer;
+    line-height: 54px;
+    transform: skew(-10deg);
+    animation: bounce 1s;
+}
+
+span {
+    color: cyan;
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .mat-toolbar {
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-wrapper {
+        width: 100%;
+    }
+
+    .menu-wrapper .logo,
+    .menu-wrapper .register {
+        text-decoration: none;
+        float: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: aqua;
+    }
+
+    .menu-wrapper .logo,
+    .menu-wrapper .register {
+        margin-right: 10px;
+    }
+
+    #toggler, .burger {
+        display: inline;
+        position: relative;
+    }
+
+    .menu-wrapper #toggler:active + .burger > div {
+        transform: rotate(135deg);
+    }
+   
+       
+    .menu-wrapper #toggler:active + .burger > div::before,
+    .menu-wrapper #toggler:active + .burger > div::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    .menu-wrapper #toggler:active:hover + .burger > div {
+        transform: rotate(225deg);
+    }
+    
+    .menu-wrapper #toggler:active ~ .menu {
+        visibility: visible;
+        z-index: 1;
+    }
+
+    .menu-wrapper #toggler:checked ~ .menu {
+        transform: scale(1);
+        transition-duration: var(--menu-speed);
+    }
+  
+    .menu-wrapper #toggler:checked ~ .menu {
+        opacity: 1;
+        transition: opacity 0.4s ease;
+    }
+}

@@ -1,0 +1,50 @@
+<div id="nav-bar">
+<mat-toolbar class="mat-toolbar">
+  
+<header class="nav-bar-header">
+  <div class="menu-wrapper">
+    <div class="navbar">
+      <span [routerLink]="['/home']" class="span-tag"> Home </span>
+      <span [matMenuTriggerFor]="subMenu" class="span-tag"> Services <mat-icon class="mat-icon">arrow_drop_down
+        </mat-icon> </span>
+      <span [routerLink]="['/about']" class="span-tag">
+        About
+      </span>
+      <span class="span-tag">
+        <a href="mailto:bulima.global@bulimas.com?Subject=Service information">Email Us</a>
+      </span>
+    </div>
+
+
+    <a [routerLink]="['']" class="logo">{{ logo }}</a>
+    <a [routerLink]="['/registration']" class="register">Register Me</a>
+
+    <button mat-flat-button [matMenuTriggerFor]="appMenu" type="checkbox" id="toggler"></button>
+
+    <div class="burger">
+      <div>
+      </div>
+    </div>
+  </div>
+</header>
+
+</mat-toolbar>
+
+<mat-menu #appMenu="matMenu">
+  <a [routerLink]="['/home']" mat-menu-item >Home</a>
+  <a mat-menu-item [matMenuTriggerFor]="subMenu">Services</a>
+  <a [routerLink]="['/about']" mat-menu-item>About</a>
+  <a mat-menu-item> <a href="mailto:bulima.global@bulimas.com?Subject=Service information">Email Us</a></a>
+
+</mat-menu>
+
+<mat-menu #subMenu="matMenu">
+  <a [routerLink]="['/ethio-attractions']" mat-menu-item>Ethio-Attractions
+  </a>
+  <a [routerLink]="['/ethio-cities']" mat-menu-item>Ethio-Cities
+  </a>
+  <a [routerLink]="['/ethio-celebrities']" mat-menu-item>Ethio-Celebrities
+  </a>
+
+</mat-menu>
+</div>
