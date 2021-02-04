@@ -24,7 +24,7 @@ import { AboutComponent } from './components/about/about.component';
     StartPageModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes, { useHash: true})
+    RouterModule.forRoot(appRoutes, { useHash: true, relativeLinkResolution: 'legacy' })
   ],
 
   declarations: [
